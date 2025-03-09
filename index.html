@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Środowisko Nauki PowerShell</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism-tomorrow.min.css" rel="stylesheet">
+</head>
+<body class="bg-dark text-light">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="#">Nauka PowerShell</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#" data-section="lessons">Lekcje</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-section="practice">Praktyka</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-section="playground">Plac Zabaw</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-section="exercises">Ćwiczenia</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-section="scripts">Przykładowe Skrypty</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <div id="lessons-section" class="section active">
+            <h2>Podstawy PowerShell</h2>
+            <div class="lesson-list"></div>
+        </div>
+
+        <div id="practice-section" class="section">
+            <h2>Terminal Praktyczny</h2>
+            <div class="terminal-container">
+                <div class="terminal-header">
+                    <span class="terminal-title">Terminal PowerShell</span>
+                </div>
+                <div id="terminal" class="terminal">
+                    <div id="terminal-output"></div>
+                    <div class="terminal-input-line">
+                        <span class="prompt">PS></span>
+                        <input type="text" id="terminal-input" autocomplete="off">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="playground-section" class="section">
+            <h2>Plac Zabaw PowerShell</h2>
+            <div class="playground-container">
+                <div class="playground-editor">
+                    <textarea id="code-editor" class="code-input" spellcheck="false" placeholder="Wpisz polecenia PowerShell..."></textarea>
+                    <pre class="code-output"><code class="language-powershell" id="syntax-highlight"></code></pre>
+                </div>
+                <div class="playground-controls mt-3">
+                    <button class="btn btn-primary" id="run-code">Uruchom</button>
+                    <button class="btn btn-secondary" id="clear-code">Wyczyść</button>
+                </div>
+                <div class="playground-output mt-3">
+                    <pre id="code-output" class="bg-dark text-light p-3 rounded"></pre>
+                </div>
+            </div>
+        </div>
+
+        <div id="exercises-section" class="section">
+            <h2>Ćwiczenia</h2>
+            <div class="exercise-list"></div>
+        </div>
+
+        <div id="scripts-section" class="section">
+            <h2>Przykładowe Skrypty PowerShell</h2>
+            <div class="scripts-list"></div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-powershell.min.js"></script>
+    <script src="js/lessons.js"></script>
+    <script src="js/terminal.js"></script>
+    <script src="js/exercises.js"></script>
+    <script src="js/playground.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
